@@ -51,7 +51,7 @@ $cakeDescription = '和暦To西暦';
 
 
 <div class="to-seireki-input">
-    <?= $this->Form->create($formEntity, ['url' => ['controller' => 'toseirekis', 'action' => 'index'], 'type' => 'get']) ?>
+    <?= $this->Form->create($formEntity, ['url' => ['controller' => 'to-seirekis', 'action' => 'index'], 'type' => 'get']) ?>
     <div class="warekiradio-input-wrapper">
     <?php
         //pr($formEntity);
