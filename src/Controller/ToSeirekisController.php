@@ -60,7 +60,7 @@ class ToSeirekisController extends AppController
 
 
         // ホープ―ページのデザイン流用
-        $this->render('/pages/home');
+        $this->render('/Pages/home');
 
     }
 
