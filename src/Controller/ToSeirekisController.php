@@ -25,11 +25,11 @@ class ToSeirekisController extends AppController
         // query引数取得
         $wareki_gengou_yomi = '';
         $wareki_year=0;
-        if(isset($this->request->query['gengou'])){
-            $wareki_gengou_yomi=$this->request->query['gengou'];
+        if( $this->request->getQuery('gengou') != null ){
+            $wareki_gengou_yomi=$this->request->getQuery('gengou');
         }
-        if(isset($this->request->query['year'])){
-            $wareki_year = $this->request->query['year'];
+        if( $this->request->getQuery('year') != null ){
+            $wareki_year = $this->request->getQuery('year');
         }
 
         // Formを呼び出す
@@ -39,7 +39,7 @@ class ToSeirekisController extends AppController
 
         $seireki_year=0;
         // バリデーション呼び出し
-        if ($formEntity->execute($this->request->query())) {
+        if ($formEntity->execute($this->request->getQueryParams())) {
             // 正常時
             $wareki_gengou = $gengou_radio_options[$wareki_gengou_yomi];
 
