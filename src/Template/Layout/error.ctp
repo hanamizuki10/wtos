@@ -24,24 +24,27 @@
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('layout.error.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <div id="container">
-        <div id="header">
-            <h1><?= __('Error') ?></h1>
-        </div>
-        <div id="content">
-            <?= $this->Flash->render() ?>
-
-            <?= $this->fetch('content') ?>
-        </div>
-        <div id="footer">
-            <?= $this->Html->link(__('Back'), 'javascript:history.back()') ?>
-        </div>
+<header class="row">
+    <div class="header-title">
+        <?= __('Error') ?>
     </div>
+</header>
+<?= $this->Flash->render() ?>
+
+<div class="container-error">
+    <div id="content">
+        <?= $this->fetch('content') ?>
+    </div>
+    <div id="footer">
+        <?= $this->Html->link(__('Back'), 'javascript:history.back()') ?>
+    </div>
+</div>
 </body>
 </html>
