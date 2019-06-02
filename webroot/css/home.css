@@ -1,0 +1,100 @@
+div.to-seireki-input{
+    text-align: center;
+}
+div.warekiradio-input-wrapper{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display : -webkit-inline-box;
+	display : -ms-inline-flexbox;
+	display : -webkit-inline-flex;
+	display : inline-flex;
+}
+div.warekiradio-input-wrapper input{
+    display: none;
+}
+div.warekiradio-input-wrapper label{
+    display: block;
+	cursor: pointer;
+	width: 80px;
+	margin: 0;
+	padding: 12px 5px;
+	border-right: 1px solid #abb2b7;
+	background: #bdc3c7;
+	color: #555e64;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1;
+	transition: .2s;
+}
+
+div.warekiradio-input-wrapper  label:first-of-type{
+	border-radius: 3px 0 0 3px;
+}
+div.warekiradio-input-wrapper  label:last-of-type{
+    border-right: 0px;
+	border-radius: 0 3px 3px 0;
+}
+div.warekiradio-input-wrapper label.checked-radio{
+	background-color: #a1b91d;
+	color: #fff;
+}
+
+
+div.yeartext-input-wrapper {
+}
+div.yeartext-input-wrapper div{
+    display: inline-block;
+}
+div.yeartext-input-wrapper div input{
+    height: 60px;
+    width: 200px;
+    font-size: 30px;
+    text-align: right;
+    vertical-align: top;
+}
+div.yeartext-input-wrapper div div.error-message{
+    color: red;
+}
+
+div.yeartext-input-wrapper::after{
+    content: ' 年 ';
+    vertical-align: top;
+    font-size: 40px;
+}
+
+
+div.wareki-to-seireki-results{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+    align-items: center; /* 縦方向中央揃え */
+    -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+    justify-content: center; /* 横方向中央揃え */
+
+}
+
+
+div.wareki-to-seireki-results div{
+    position: relative;
+}
+div.wareki-to-seireki-results div.to{
+    width: 50px;
+    height: 100px;
+}
+
+div.wareki-to-seireki-results div.wareki,
+div.wareki-to-seireki-results div.seireki{
+    width: 200px;
+    height: 100px;
+    background-color: #76edf5;
+}
+
+div.wareki-to-seireki-results div div.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    width: 200px;
+    text-align: center;/*一応BOX内の文字も中央寄せ*/
+}
